@@ -1,0 +1,10 @@
+<!doctype html>
+<title>Hello from Flask</title>
+{% if name=='test' %}
+    <h2>Production: {{ power }} Watts</h2>
+    <h2>Selling at: {{ sellAt }} cents</h2>
+    <h2>Tons of coal saved: {{ tonsCoal }} tons!</h2>
+    <img src={{ chart }} />
+{% else %}
+  <h1>Hello World!</h1>
+{% endif %}
