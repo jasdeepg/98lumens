@@ -55,7 +55,7 @@ def makeChart():
         
     return chart
 
-@app.route('/hello/')
+@app.route('/')
 #@app.route('/hello/<name>')
 def hello_world(name='test'):
     panel_OCV = panel1.getOCV()
