@@ -5,6 +5,7 @@ import State
 from pygooglechart import Chart
 from pygooglechart import SimpleLineChart
 from pygooglechart import Axis
+import os
 
 app = Flask(__name__)
 panel1 = Panel.panel_production('Jim', 2, 2, 4)
@@ -68,4 +69,5 @@ def hello_world(name='test'):
                            sellAt=elecSell, tonsCoal = tonsCoal, chart = display)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=None)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)

@@ -32,7 +32,7 @@ end
 # unset irrelevant variables
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/Users/bhander/Dropbox/workspace/learn/makeproject/venv"
+set -gx VIRTUAL_ENV "/Users/bhander/Dropbox/workspace/learn/98lumens/venv"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH
