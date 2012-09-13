@@ -8,7 +8,10 @@ from pygooglechart import Axis
 import os
 
 app = Flask(__name__)
-panel1 = Panel.panel_production('Jim', 2, 2, 4)
+panel1 = Panel.panel_production('Jim', 2, 2, 4, 1)
+panel2 = Panel.panel_production('Jim2', 2, 2, 4, 2)
+panels = [panel1, panel2]
+myPanel = "jim"
 CA = State.stateReg('California',15,5)
 
 #initialize sample vars
@@ -26,11 +29,14 @@ def makeChart():
     chart = SimpleLineChart(400, 250, y_range=[0, max_y])
     
     # Add the chart data
+    # Aggregate data into array before adding to chart
     data = [
         32, 34, 34, 32, 34, 34, 32, 32, 32, 34, 34, 32, 29, 29, 34, 34, 34, 37,
         37, 39, 42, 47, 50, 54, 57, 60, 60, 60, 60, 60, 60, 60, 62, 62, 60, 55,
         55, 52, 47, 44, 44, 40, 40, 37, 34, 34, 32, 32, 32, 31, 32
     ]
+    #for i in data:
+    #    chart.add_data(i)
     chart.add_data(data)
     
     # Set the line colour to blue
@@ -66,7 +72,8 @@ def hello_world(name='test'):
     chart = makeChart()
     display = chart.get_url()
     return render_template('template.html', name=name, power=panelWatt,
-                           sellAt=elecSell, tonsCoal = tonsCoal, chart = display)
+                           sellAt=elecSell, tonsCoal = tonsCoal, chart = display,
+                           panelsOwned = panels)
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))

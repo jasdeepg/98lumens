@@ -1,6 +1,7 @@
 
 class panel_production():
     Owner = ''
+    panelNumber = 0
     dimX = 0
     dimY = 0
     totalWatt= 0
@@ -27,8 +28,9 @@ class panel_production():
     def getOwner(self):
         return self.Owner
     
-    def __init__(self, name, dimX, dimY, totalWatt):
+    def __init__(self, name, dimX, dimY, totalWatt, panelNumber):
         self.Owner = name
         self.dimX = dimX
         self.dimY = dimY
         self.totalWatt = totalWatt
+        self.panelNumber = panelNumber
