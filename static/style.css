@@ -1,17 +1,14 @@
-/* general style */
-body  {margin: 0; padding: 0}
+/* general styling */
+h2,p  {font-family: sans-serif}
+td  {font-family: sans-serif}
 
-/* div style */
-div.container    {width: 720px; margin: 50px auto}
-div.header  {float: left}
-div.navigation  {float: right}
-div.body    {width: 500px; clear: both; margin: 0px auto}
-div.item    {text-align: center; width: inherit; height: 50px; margin:0 px auto;
-                border: 1px dotted}
-div.footer  {text-align: center; border-top:1px solid; margin: 10px auto}
-div.panels  {float: left}
+/* div styling */
+div.page   {width: 700px; margin: auto}
+div.titleRibbon {height:auto; background: #ccc; margin: 0px auto; border-top: 1px solid; border-bottom: 1px solid}
+div.navigation {height: 30px}
+div.footer  {border-top:1px solid; text-align: center}
+div.test    {width: 500px; height: auto}
 
-
-/* misc style */
-table.center    {text-align: center; width: inherit; margin-left: auto; margin-right: auto}
+/* other styling */
 img.displayed  {display: block; margin-left: auto; margin-right: auto}
+table.center    {text-align: center; width: inherit; margin-left: auto; margin-right: auto}

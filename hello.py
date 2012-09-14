@@ -18,9 +18,6 @@ CA = State.stateReg('California',15,5)
 panel1.setOCV(1)
 panel1.setSCI(1)
 
-def hey():
-    return 'hey'
-
 def makeChart():
     # Set the vertical range from 0 to 100
     max_y = 100
